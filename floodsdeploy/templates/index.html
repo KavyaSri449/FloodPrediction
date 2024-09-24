@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainfall Data Submission</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> 
+</head>
+<body>
+    <h1>Rainfall Data Submission</h1>
+    <form method="POST" action="/predict">
+        <h2>Monthly Rainfall (in mm)</h2>
+        <label for="jan">January:</label>
+        <input type="text" id="jan" name="jan" required>
+        <label for="feb">February:</label>
+        <input type="text" id="feb" name="feb" required>
+        <label for="mar">March:</label>
+        <input type="text" id="mar" name="mar" required>
+        <label for="apr">April:</label>
+        <input type="text" id="apr" name="apr" required>
+        <label for="may">May:</label>
+        <input type="text" id="may" name="may" required>
+        <label for="jun">June:</label>
+        <input type="text" id="jun" name="jun" required>
+        <label for="jul">July:</label>
+        <input type="text" id="jul" name="jul" required>
+        <label for="aug">August:</label>
+        <input type="text" id="aug" name="aug" required>
+        <label for="sep">September:</label>
+        <input type="text" id="sep" name="sep" required>
+        <label for="oct">October:</label>
+        <input type="text" id="oct" name="oct" required>
+        <label for="nov">November:</label>
+        <input type="text" id="nov" name="nov" required>
+        <label for="dec">December:</label>
+        <input type="text" id="dec" name="dec" required>
+        <label for="annual">Annual Rainfall:</label>
+        <input type="text" id="annual" name="annual" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

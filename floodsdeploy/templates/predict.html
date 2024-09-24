@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Flood Prediction Result</h1>
+    <h2>Your Prediction: {{ Prediction }}</h2>
+
+    {% if Prediction == 'Flood' %}
+        <h3>Warning: Flood Risk Detected!</h3>
+        <p>Please take necessary precautions:</p>
+        <ul>
+            <li>Move to higher ground immediately.</li>
+            <li>Avoid walking or driving through floodwaters.</li>
+            <li>Listen to local news for updates.</li>
+            <li>Prepare an emergency kit with essential supplies.</li>
+            <li>Stay indoors if flooding occurs in your area.</li>
+        </ul>
+    {% else %}
+        <h3>No Flood Risk Detected!</h3>
+        <p>You can continue with your daily activities, but stay alert for any weather updates.</p>
+    {% endif %}
+    
+    <a href="/">Back to Submission</a>
+</body>
+</html>
